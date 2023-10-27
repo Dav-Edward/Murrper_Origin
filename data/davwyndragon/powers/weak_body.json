@@ -1,0 +1,11 @@
+{
+    "type": "origins:attribute",
+	"name": "§4§n§lWeak Body",
+	"description": "This dragon have no scales for protection.§7\n- have 4 hearts.",
+    "modifier": {
+        "name": "Weak Body",
+        "attribute": "minecraft:generic.max_health",
+        "operation": "multiply_total",
+        "value": -0.6
+    }
+}

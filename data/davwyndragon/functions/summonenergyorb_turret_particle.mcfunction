@@ -1,0 +1,1 @@
+execute at @s anchored eyes positioned ^ ^-1 ^1 run particle minecraft:end_rod ^ ^0.5 ^ 0.1 0.1 0.1 0.02 1 force

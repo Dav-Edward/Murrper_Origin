@@ -1,0 +1,10 @@
+{
+	"name": "§f§n§lExtra Option Toggle",
+	"description": "Extra menu for the PVP mode option.§7\n- Hold switch ability button for two seconds while sneaking to enable extra option.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "hud_render": {
+        "should_render": false
+	}
+}

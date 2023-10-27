@@ -1,0 +1,23 @@
+{
+	"name": "§f§n§lRage Resource",
+	"description": "Rage is the resource used by some abilities.§7\n- this resource builds up in combat.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 5,
+		"condition":{
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:rage_resource",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	}
+}

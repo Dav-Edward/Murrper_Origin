@@ -1,0 +1,254 @@
+{
+	"name": "§f§n§lCycle Primary Ability",
+	"description": "Cycle your primary ability.§7\n[Activate] by origin secondary key bind.",
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else_list",
+		"actions": [
+			{
+				"condition":{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:option_toggle",
+							"comparison": "==",
+							"compare_to": 0
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:if_else_list",
+							"actions": [
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": ">=",
+												"compare_to": 3
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": ">=",
+												"compare_to": 8
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:skill_cycle",
+												"operation":"set",
+												"change": 0
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:ui.loom.select_pattern",
+												"volume": 0.5
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": ">=",
+												"compare_to": 2
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": "<=",
+												"compare_to": 7
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": ">=",
+												"compare_to": 6
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:skill_cycle",
+												"operation":"set",
+												"change": 0
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:ui.loom.select_pattern",
+												"volume": 0.5
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": ">=",
+												"compare_to": 1
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": "<=",
+												"compare_to": 5
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": ">=",
+												"compare_to": 2
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:skill_cycle",
+												"operation":"set",
+												"change": 0
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:ui.loom.select_pattern",
+												"volume": 0.5
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": ">=",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": "<=",
+												"compare_to": 1
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": ">=",
+												"compare_to": 0
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:skill_cycle",
+												"operation":"set",
+												"change": 0
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:ui.loom.select_pattern",
+												"volume": 0.5
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "<",
+												"compare_to": 3
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:skill_cycle",
+												"change": 1
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:ui.loom.select_pattern",
+												"volume": 0.5
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"condition":{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:option_toggle",
+							"comparison": "==",
+							"compare_to": 1
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:change_resource",
+							"resource": "davwyndragon:option_toggle",
+							"operation":"set",
+							"change": 0
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "function davwyndragon:alert_option_off",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "minecraft:ui.loom.select_pattern",
+							"volume": 0.5
+						}
+					]
+				}
+			}
+		]
+	},
+	"cooldown": 0,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "key.origins.secondary_active",
+		"continuous": false
+	}
+}

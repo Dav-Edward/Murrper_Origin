@@ -1,0 +1,12 @@
+{
+    "name": "Glow",
+	"description": "You give off a soft glow making you easier to find by friends.",
+	"type": "origins:self_glow",
+	"bientity_condition": {
+        "type": "origins:can_see"
+    },
+    "use_teams": false,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+}

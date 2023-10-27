@@ -1,0 +1,135 @@
+{
+    "type": "origins:action_over_time",
+	"name": "§2§n§lFlight",
+	"description": "Allows you to fly for a limited time and also provides gliding.§7\n[Passive]\n- this ability requires stamina.\n- when taking damage while flying will reduce your stamina by 25%.",
+    "entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:change_resource",
+				"resource": "davwyndragon:stamina_resource",
+				"change": -1
+			},
+			{
+				"type": "origins:if_else_list",
+    			"actions": [
+        			{
+            			"condition": {
+                			"type": "origins:resource",
+							"resource": "davwyndragon:dav_flyboost_resource",
+							"comparison": "==",
+							"compare_to": 2
+            			},
+            			"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:add_velocity",
+									"z": 0.20,
+									"space": "local"
+								},
+								{
+									"type": "origins:change_resource",
+									"resource": "davwyndragon:dav_flyboost_resource",
+									"operation":"set",
+									"change": 1
+								}
+							]
+						}
+					},
+					{
+						"condition": {
+							"type": "origins:resource",
+							"resource": "davwyndragon:dav_flyboost_resource",
+							"comparison": "==",
+							"compare_to": 1
+						},
+						"action": {
+							"type": "origins:add_velocity",
+							"z": 0.10,
+							"space": "local"
+						}
+        			},
+					{
+						"condition": {
+							"type": "origins:resource",
+							"resource": "davwyndragon:dav_flyboost_resource",
+							"comparison": "==",
+							"compare_to": 0
+						},
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:add_velocity",
+									"z": 0,
+									"space": "local"
+								},
+								{
+									"type": "origins:change_resource",
+									"resource": "davwyndragon:dav_flyboost_resource",
+									"operation":"set",
+									"change": 1
+								}
+							]
+						}
+        			}
+    			]
+			},
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:slow_falling",
+					"duration": 100,
+					"amplifier": 255,
+					"show_particles":false
+				}
+			}
+		]
+    },
+    "interval": 10,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:resource",
+				"resource": "davwyndragon:stamina_resource",
+				"comparison": ">",
+				"compare_to": 0
+			},
+			{
+				"type": "origins:moving"
+			},
+			{
+				"type": "origins:fall_flying"
+			},
+			{
+				"type": "origins:fluid_height",
+				"fluid": "minecraft:water",
+				"comparison": "<=",
+				"compare_to": 0.0
+			},
+			{
+				"type": "origins:fluid_height",
+				"fluid": "minecraft:lava",
+				"comparison": "<=",
+				"compare_to": 0.0
+			},
+			{
+				"type": "origins:submerged_in",
+				"fluid": "minecraft:water",
+				"inverted": true
+			},
+			{
+				"type": "origins:submerged_in",
+				"fluid": "minecraft:lava",
+				"inverted": true
+			},
+			{
+				"type": "origins:food_level",
+				"comparison": ">",
+				"compare_to": 6
+			}
+		]
+	}
+}

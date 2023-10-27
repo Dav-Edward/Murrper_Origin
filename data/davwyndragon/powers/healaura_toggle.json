@@ -1,0 +1,40 @@
+{
+	"name": "§6§n§lHealing Aura",
+	"description": "Heals all living creatures around you.§7\n[Unlock at level 2]\n- this ability is toggleable\n- heals everything including enemies.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 9,
+		"condition":{
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:skill_cycle",
+							"comparison": "==",
+							"compare_to": 1
+						},
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:healaura_toggle",
+							"comparison": "==",
+							"compare_to": 1
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:option_toggle",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	}
+}

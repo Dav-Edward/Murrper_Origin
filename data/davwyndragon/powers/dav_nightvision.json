@@ -1,0 +1,5 @@
+{
+    "name": "Night Vision",
+	"description": "Low-light vision.",
+	"type": "origins:night_vision"
+}

@@ -1,0 +1,692 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"roll_dash_1":{
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_forward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"comparison": "<",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"change": 1
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.forward",
+			"continuous": false
+		}
+	},
+	"roll_dash_2":{
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_backward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+								"comparison": "<",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+								"change": 2
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.back",
+			"continuous": false
+		}
+	},
+	"roll_dash_1_update":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_forward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:stamina_resource",
+								"comparison": ">=",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"comparison": ">=",
+								"compare_to": 100
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:fall_flying",
+								"inverted": true
+							},
+							{
+								"type": "origins:sprinting",
+								"inverted": true
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"change": 1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"change": -100
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 1.00,
+								"space": "local"
+							},
+							{
+								"type": "origins:add_velocity",
+								"y": 0.50,
+								"space": "world"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.goat.long_jump",
+								"volume": 1.0,
+								"pitch": 0.5
+							},
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:slow_falling",
+									"duration": 100,
+									"amplifier": 255,
+									"show_particles":false
+								}
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:stamina_resource",
+								"change": -10
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_forward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:stamina_resource",
+								"comparison": ">=",
+								"compare_to": 20
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"comparison": ">=",
+								"compare_to": 100
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:fall_flying"
+							},
+							{
+								"type": "origins:sprinting",
+								"inverted": true
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"change": 1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"change": -100
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.50,
+								"space": "local"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.goat.long_jump",
+								"volume": 1.0,
+								"pitch": 0.5
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:stamina_resource",
+								"change": -20
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_forward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:stamina_resource",
+								"comparison": ">=",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"comparison": ">=",
+								"compare_to": 100
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:fall_flying",
+								"inverted": true
+							},
+							{
+								"type": "origins:sprinting",
+								"inverted": true
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<=",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"change": 1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"change": -100
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.50,
+								"space": "local"
+							},
+							{
+								"type": "origins:add_velocity",
+								"y": 0.10,
+								"space": "world"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.goat.long_jump",
+								"volume": 0.5,
+								"pitch": 0.5
+							},
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:slow_falling",
+									"duration": 100,
+									"amplifier": 255,
+									"show_particles":false
+								}
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:stamina_resource",
+								"change": -10
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_forward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:stamina_resource",
+								"comparison": ">=",
+								"compare_to": 20
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"comparison": ">=",
+								"compare_to": 100
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:fall_flying"
+							},
+							{
+								"type": "origins:sprinting",
+								"inverted": true
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<=",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"change": 1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"change": -100
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.20,
+								"space": "local"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.goat.long_jump",
+								"volume": 0.5,
+								"pitch": 0.5
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:stamina_resource",
+								"change": -20
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_forward_timer",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+								"change": -3
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 1
+	},
+	"roll_dash_2_update":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_backward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:stamina_resource",
+								"comparison": ">=",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"comparison": ">=",
+								"compare_to": 100
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:fall_flying",
+								"inverted": true
+							},
+							{
+								"type": "origins:sprinting",
+								"inverted": true
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+								"change": 1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"change": -100
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": -1.00,
+								"space": "local"
+							},
+							{
+								"type": "origins:add_velocity",
+								"y": 0.50,
+								"space": "world"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.goat.long_jump",
+								"volume": 1.0,
+								"pitch": 0.5
+							},
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:slow_falling",
+									"duration": 100,
+									"amplifier": 255,
+									"show_particles":false
+								}
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:stamina_resource",
+								"change": -10
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_backward_timer",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:stamina_resource",
+								"comparison": ">=",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"comparison": ">=",
+								"compare_to": 100
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:fall_flying",
+								"inverted": true
+							},
+							{
+								"type": "origins:sprinting",
+								"inverted": true
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<=",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+								"change": 1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:roll_dash_cooldown",
+								"change": -100
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": -0.50,
+								"space": "local"
+							},
+							{
+								"type": "origins:add_velocity",
+								"y": 0.10,
+								"space": "world"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.goat.long_jump",
+								"volume": 0.5,
+								"pitch": 0.5
+							},
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:slow_falling",
+									"duration": 100,
+									"amplifier": 255,
+									"show_particles":false
+								}
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:stamina_resource",
+								"change": -10
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:passive_key_resource_backward_timer",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+								"change": -3
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 1
+	}
+}

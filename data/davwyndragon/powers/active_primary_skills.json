@@ -1,0 +1,679 @@
+{
+	"hidden": true,
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else_list",
+		"actions": [
+			{
+				"condition":{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:option_toggle",
+							"comparison": "==",
+							"compare_to": 0
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:if_else_list",
+							"actions": [
+								{
+									"condition": {
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:fireblast_cooldown",
+												"comparison": ">=",
+												"compare_to": 100
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:ability_delay",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:mana_resource",
+												"comparison": ">=",
+												"compare_to": 5
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": ">=",
+												"compare_to": 1
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:fireblast_cooldown",
+												"change": -100
+											},
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:ability_delay",
+												"change": 12
+											},
+											{
+												"type": "origins:if_else_list",
+												"actions": [
+													{
+														"condition":{
+															"type": "origins:and",
+															"conditions": [
+																{
+																	"type": "origins:resource",
+																	"resource": "davwyndragon:pvp_toggle",
+																	"comparison": "==",
+																	"compare_to": 0
+																}
+															]
+														},
+														"action": {
+															"type": "origins:and",
+															"actions": [
+																{
+																	"type": "origins:execute_command",
+																	"command": "function davwyndragon:shotfireblast",
+																	"permission_level": 4
+																}
+															]
+														}
+													},
+													{
+														"condition":{
+															"type": "origins:and",
+															"conditions": [
+																{
+																	"type": "origins:resource",
+																	"resource": "davwyndragon:pvp_toggle",
+																	"comparison": "==",
+																	"compare_to": 1
+																}
+															]
+														},
+														"action": {
+															"type": "origins:and",
+															"actions": [
+																{
+																	"type": "origins:execute_command",
+																	"command": "function davwyndragon:shotfireblast_pvp",
+																	"permission_level": 4
+																}
+															]
+														}
+													}
+												]
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:entity.illusioner.mirror_move"
+											},
+											{
+												"type": "origins:add_velocity",
+												"z": -0.25,
+												"space": "local"
+											},
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:mana_resource",
+												"change": -5
+											}
+										]
+									}
+								},
+								{
+									"condition": {
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:fireblast_cooldown",
+												"comparison": ">=",
+												"compare_to": 100
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:ability_delay",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:mana_resource",
+												"comparison": ">=",
+												"compare_to": 5
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": "==",
+												"compare_to": 0
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:execute_command",
+												"command": "function davwyndragon:ability_alert_fireblast_level",
+												"permission_level": 4
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:item.crossbow.loading_end"
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "==",
+												"compare_to": 1
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:healaura_toggle",
+												"comparison": "==",
+												"compare_to": 1
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:healaura_toggle",
+												"change": -1
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:block.beacon.deactivate",
+												"volume": 1.0,
+												"pitch": 1.2
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:block.beacon.power_select",
+												"volume": 0.5,
+												"pitch": 1.5
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "==",
+												"compare_to": 1
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:healaura_toggle",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:mana_resource",
+												"comparison": ">=",
+												"compare_to": 6
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:healaura_toggle",
+												"change": 1
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:block.beacon.activate",
+												"volume": 1.0,
+												"pitch": 1.2
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:block.beacon.power_select",
+												"volume": 0.5,
+												"pitch": 1.5
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "==",
+												"compare_to": 2
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:energyorb_toggle",
+												"comparison": "==",
+												"compare_to": 1
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:energyorb_toggle",
+												"change": -1
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:block.beacon.power_select",
+												"volume": 0.5,
+												"pitch": 1.5
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "==",
+												"compare_to": 2
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:energyorb_toggle",
+												"comparison": "==",
+												"compare_to": 0
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:energyorb_toggle",
+												"change": 1
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:block.beacon.power_select",
+												"volume": 0.5,
+												"pitch": 1.5
+											}
+										]
+									}
+								},
+								{
+									"condition": {
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:skill_cycle",
+												"comparison": "==",
+												"compare_to": 3
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:beamsaberclaw_cooldown",
+												"comparison": ">=",
+												"compare_to": 100
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:ability_delay",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:beamsaberclaw_action_resource",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:beamsaberclaw_timeline_resource",
+												"comparison": "==",
+												"compare_to": 0
+											},
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:mana_resource",
+												"comparison": ">=",
+												"compare_to": 5
+											},
+											{
+												"type": "origins:xp_levels",
+												"comparison": ">=",
+												"compare_to": 8
+											}
+										]
+									},
+									"action": {
+										"type": "origins:if_else_list",
+										"actions": [
+											{
+												"condition": {
+													"type": "origins:and",
+													"conditions": [
+														{
+															"type": "origins:resource",
+															"resource": "davwyndragon:rage_resource",
+															"comparison": "==",
+															"compare_to": 100
+														}
+													]
+												},
+												"action": {
+													"type": "origins:and",
+													"actions": [
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:beamsaberclaw_action_resource",
+															"operation":"set",
+															"change": 5
+														},
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:ability_delay",
+															"operation":"set",
+															"change": 70
+														},
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:rage_resource",
+															"operation":"set",
+															"change": 0
+														}
+													]
+												}
+											},
+											{
+												"condition": {
+													"type": "origins:and",
+													"conditions": [
+														{
+															"type": "origins:resource",
+															"resource": "davwyndragon:beamsaberclaw_random_resource",
+															"comparison": "==",
+															"compare_to": 1
+														}
+													]
+												},
+												"action": {
+													"type": "origins:and",
+													"actions": [
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:beamsaberclaw_action_resource",
+															"operation":"set",
+															"change": 1
+														},
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:ability_delay",
+															"operation":"set",
+															"change": 10
+														}
+													]
+												}
+											},
+											{
+												"condition": {
+													"type": "origins:and",
+													"conditions": [
+														{
+															"type": "origins:resource",
+															"resource": "davwyndragon:beamsaberclaw_random_resource",
+															"comparison": "==",
+															"compare_to": 2
+														}
+													]
+												},
+												"action": {
+													"type": "origins:and",
+													"actions": [
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:beamsaberclaw_action_resource",
+															"operation":"set",
+															"change": 2
+														},
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:ability_delay",
+															"operation":"set",
+															"change": 10
+														}
+													]
+												}
+											},
+											{
+												"condition": {
+													"type": "origins:and",
+													"conditions": [
+														{
+															"type": "origins:resource",
+															"resource": "davwyndragon:beamsaberclaw_random_resource",
+															"comparison": "==",
+															"compare_to": 3
+														}
+													]
+												},
+												"action": {
+													"type": "origins:and",
+													"actions": [
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:beamsaberclaw_action_resource",
+															"operation":"set",
+															"change": 3
+														},
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:ability_delay",
+															"operation":"set",
+															"change": 15
+														}
+													]
+												}
+											},
+											{
+												"condition": {
+													"type": "origins:and",
+													"conditions": [
+														{
+															"type": "origins:resource",
+															"resource": "davwyndragon:beamsaberclaw_random_resource",
+															"comparison": "==",
+															"compare_to": 4
+														}
+													]
+												},
+												"action": {
+													"type": "origins:and",
+													"actions": [
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:beamsaberclaw_action_resource",
+															"operation":"set",
+															"change": 4
+														},
+														{
+															"type": "origins:change_resource",
+															"resource": "davwyndragon:ability_delay",
+															"operation":"set",
+															"change": 20
+														}
+													]
+												}
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:resource",
+										"resource": "davwyndragon:mana_resource",
+										"comparison": ">=",
+										"compare_to": 0
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:item.crossbow.loading_end"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"condition":{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:option_toggle",
+							"comparison": "==",
+							"compare_to": 1
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:if_else_list",
+							"actions": [
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:pvp_toggle",
+												"comparison": "==",
+												"compare_to": 0
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:pvp_toggle",
+												"operation":"set",
+												"change": 1
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:item.crossbow.loading_end"
+											},
+											{
+												"type": "origins:execute_command",
+												"command": "function davwyndragon:alert_pvp_on",
+												"permission_level": 4
+											}
+										]
+									}
+								},
+								{
+									"condition":{
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:resource",
+												"resource": "davwyndragon:pvp_toggle",
+												"comparison": "==",
+												"compare_to": 1
+											}
+										]
+									},
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:change_resource",
+												"resource": "davwyndragon:pvp_toggle",
+												"operation":"set",
+												"change": 0
+											},
+											{
+												"type": "origins:play_sound",
+												"sound": "minecraft:item.crossbow.loading_end"
+											},
+											{
+												"type": "origins:execute_command",
+												"command": "function davwyndragon:alert_pvp_off",
+												"permission_level": 4
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	},
+	"cooldown": 0,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	}
+}

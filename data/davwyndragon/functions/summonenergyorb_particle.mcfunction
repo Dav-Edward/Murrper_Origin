@@ -1,0 +1,4 @@
+execute as @e[tag=fd_energy_orb_1,distance=..30,limit=1,sort=nearest] if entity @s at @s run particle minecraft:end_rod ^ ^ ^ 0.1 0.1 0.1 0.02 1 force
+execute as @e[tag=fd_energy_orb_2,distance=..30,limit=1,sort=nearest] if entity @s at @s run particle minecraft:end_rod ^ ^ ^ 0.1 0.1 0.1 0.02 1 force
+execute unless entity @e[tag=fd_energy_orb_1,distance=..30,limit=1,sort=nearest] at @s run particle minecraft:end_rod ^-1 ^1 ^ 0.1 0.1 0.1 0.02 1 force
+execute unless entity @e[tag=fd_energy_orb_2,distance=..30,limit=1,sort=nearest] at @s run particle minecraft:end_rod ^1 ^1 ^ 0.1 0.1 0.1 0.02 1 force

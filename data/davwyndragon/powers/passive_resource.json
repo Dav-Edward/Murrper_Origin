@@ -1,0 +1,1887 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"passive_initdata":{
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:pvp_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:option_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:option_toggle_hold",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:level_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:state_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ability_delay",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:skill_cycle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:mana_resource",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:stamina_resource",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:rage_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:fireblast_cooldown",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:healaura_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:beamsaberclaw_cooldown",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:beamsaberclaw_action_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:beamsaberclaw_timeline_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ride_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_forward_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_backward_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_left_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_right_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:grant_power",
+					"power": "davwyndragon:passive_wings",
+					"source": "davwyndragon:davwyndragon"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:prevent_flight_resource",
+					"operation":"set",
+					"change": 1
+				}
+			]
+		},
+		"entity_action_respawned": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:pvp_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:option_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:option_toggle_hold",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:level_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:state_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ability_delay",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:skill_cycle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:mana_resource",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:stamina_resource",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:rage_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:fireblast_cooldown",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:healaura_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:beamsaberclaw_cooldown",
+					"operation":"set",
+					"change": 100
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:beamsaberclaw_action_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:beamsaberclaw_timeline_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ride_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_forward_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_backward_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_left_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_key_resource_right_timer",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_roll_dash_forward_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:passive_roll_dash_backward_toggle",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:grant_power",
+					"power": "davwyndragon:passive_wings",
+					"source": "davwyndragon:davwyndragon"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:prevent_flight_resource",
+					"operation":"set",
+					"change": 1
+				}
+			]
+		}
+	},
+	"passive_option_hold":{
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition":{
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:sneaking"
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:option_toggle_hold",
+								"comparison": ">=",
+								"compare_to": 40
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:option_toggle_hold",
+								"operation":"set",
+								"change": 0
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:ui.loom.select_pattern",
+								"volume": 0.5
+							},
+							{
+								"type": "origins:if_else_list",
+								"actions": [
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:option_toggle",
+													"comparison": "==",
+													"compare_to": 0
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:alert_option_on",
+													"permission_level": 4
+												},
+												{
+													"type": "origins:change_resource",
+													"resource": "davwyndragon:option_toggle",
+													"operation":"set",
+													"change": 1
+												},
+												{
+													"type": "origins:play_sound",
+													"sound": "minecraft:ui.loom.select_pattern",
+													"volume": 0.5
+												}
+											]
+										}
+									},
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:option_toggle",
+													"comparison": "==",
+													"compare_to": 1
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:alert_option_off",
+													"permission_level": 4
+												},
+												{
+													"type": "origins:change_resource",
+													"resource": "davwyndragon:option_toggle",
+													"operation":"set",
+													"change": 0
+												},
+												{
+													"type": "origins:play_sound",
+													"sound": "minecraft:ui.loom.select_pattern",
+													"volume": 0.5
+												}
+											]
+										}
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"condition":{
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:sneaking"
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:option_toggle_hold",
+								"comparison": "<",
+								"compare_to": 40
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:option_toggle_hold",
+								"change": 1
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": true
+		}
+	},
+	"passive_option_hold_back":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:option_toggle_hold",
+					"operation":"set",
+					"change": 0
+				}
+			]
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:option_toggle_hold",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"passive_level_detect":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 1
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup_unlock_fireblast",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup_unlock_healaura",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 3
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 3
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 4
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup_unlock_rolldash",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 5
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 5
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup_unlock_energyorb",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 6
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 7
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 7
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 8
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup_unlock_beamsaberclaw",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 8
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 9
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:level_resource",
+								"comparison": "==",
+								"compare_to": 9
+							},
+							{
+								"type": "origins:xp_levels",
+								"comparison": ">=",
+								"compare_to": 10
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup_unlock_revengestand",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "function davwyndragon:levelup",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.evoker.prepare_summon",
+								"volume": 0.5,
+								"pitch": 2.0
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 10
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 10
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 9
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 9
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 8
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 8
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 7
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 7
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 6
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 6
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 5
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 5
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 4
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 4
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 3
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 3
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 2
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 2
+									}
+								]
+							},
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:resource",
+										"resource": "davwyndragon:level_resource",
+										"comparison": "==",
+										"compare_to": 1
+									},
+									{
+										"type": "origins:xp_levels",
+										"comparison": "<",
+										"compare_to": 1
+									}
+								]
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:if_else_list",
+								"actions": [
+									{
+										"condition": {
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:level_resource",
+													"comparison": "==",
+													"compare_to": 8
+												},
+												{
+													"type": "origins:xp_levels",
+													"comparison": "<",
+													"compare_to": 8
+												},
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:skill_cycle",
+													"comparison": "==",
+													"compare_to": 3
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:change_resource",
+													"resource": "davwyndragon:skill_cycle",
+													"operation":"set",
+													"change": 0
+												}
+											]
+										}
+									},
+									{
+										"condition": {
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:level_resource",
+													"comparison": "==",
+													"compare_to": 6
+												},
+												{
+													"type": "origins:xp_levels",
+													"comparison": "<",
+													"compare_to": 6
+												},
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:skill_cycle",
+													"comparison": "==",
+													"compare_to": 2
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:change_resource",
+													"resource": "davwyndragon:skill_cycle",
+													"operation":"set",
+													"change": 0
+												}
+											]
+										}
+									},
+									{
+										"condition": {
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:level_resource",
+													"comparison": "==",
+													"compare_to": 2
+												},
+												{
+													"type": "origins:xp_levels",
+													"comparison": "<",
+													"compare_to": 2
+												},
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:skill_cycle",
+													"comparison": "==",
+													"compare_to": 1
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:change_resource",
+													"resource": "davwyndragon:skill_cycle",
+													"operation":"set",
+													"change": 0
+												}
+											]
+										}
+									}
+								]
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:level_resource",
+								"change": -1
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 1
+	},
+	"passive_ability_delay":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ability_delay",
+					"change": -1
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:ability_delay",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"passive_mana":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:mana_resource",
+					"change": 1
+				}
+			]
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:mana_resource",
+					"comparison": "<",
+					"compare_to": 100
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:state_resource",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"comparison": ">=",
+					"compare_to": 100
+				}
+			]
+		}
+	},
+	"passive_mana_plus":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:mana_resource",
+					"change": 1
+				}
+			]
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:mana_resource",
+					"comparison": "<",
+					"compare_to": 100
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:state_resource",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"passive_stamina":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:stamina_resource",
+					"change": 1
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:stamina_resource",
+							"comparison": "<",
+							"compare_to": 100
+						},
+						{
+							"type": "origins:sprinting",
+							"inverted": true
+						},
+						{
+							"type": "origins:on_block"
+						},
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:state_resource",
+							"comparison": "==",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:ultimate_resource",
+							"comparison": ">=",
+							"compare_to": 100
+						}
+					]
+				},
+				{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:stamina_resource",
+							"comparison": "<",
+							"compare_to": 100
+						},
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:state_resource",
+							"comparison": "==",
+							"compare_to": 1
+						},
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:ultimate_resource",
+							"comparison": ">",
+							"compare_to": 0
+						}
+					]
+				}
+			]
+		}
+	},
+	"passive_rage":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:rage_resource",
+					"change": -1
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:rage_resource",
+							"comparison": ">",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:rage_resource_delay",
+							"comparison": "==",
+							"compare_to": 0
+						}
+					]
+				}
+			]
+		}
+	},
+	"passive_rage_delay":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:rage_resource_delay",
+					"change": -1
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:rage_resource_delay",
+							"comparison": ">",
+							"compare_to": 0
+						}
+					]
+				}
+			]
+		}
+	},
+	"passive_stamina_damage":{
+		"type": "origins:self_action_when_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:stamina_resource",
+					"change": -25
+				}
+			]
+		},
+		"damage_condition": {
+			"type": "origins:amount",
+			"comparison": ">=",
+			"compare_to": 0.0
+		},
+		"cooldown": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:stamina_resource",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:fall_flying"
+				},
+				{
+					"type": "origins:submerged_in",
+					"fluid": "minecraft:water",
+					"inverted": true
+				},
+				{
+					"type": "origins:submerged_in",
+					"fluid": "minecraft:lava",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"passive_ultimate":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"change": 1
+				}
+			]
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"comparison": "<",
+					"compare_to": 100
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:state_resource",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"passive_ultimate_using":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"change": -1
+				},
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "minecraft:fire_resistance",
+							"amplifier": 255,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:resistance",
+							"amplifier": 3,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:speed",
+							"amplifier": 2,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:jump_boost",
+							"amplifier": 2,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:slow_falling",
+							"amplifier": 255,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:saturation",
+							"amplifier": 0,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:mining_fatigue",
+							"amplifier": 255,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:water_breathing",
+							"amplifier": 255,
+							"duration": 100,
+							"show_particles":false
+						},
+						{
+							"effect": "minecraft:strength",
+							"amplifier": 2,
+							"duration": 100,
+							"show_particles":false
+						}
+					]
+				}
+			]
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:state_resource",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"passive_ultimate_deactive":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:state_resource",
+					"change": -1
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:mana_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:stamina_resource",
+					"operation":"set",
+					"change": 0
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"operation":"set",
+					"change": 0
+				}
+			]
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:ultimate_resource",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:state_resource",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"passive_fireblast_cooldown":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:fireblast_cooldown",
+					"change": 8
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:fireblast_cooldown",
+					"comparison": "<",
+					"compare_to": 100
+				}
+			]
+		}
+	},
+	"passive_roll_dash_cooldown":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:roll_dash_cooldown",
+					"change": 8
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:roll_dash_cooldown",
+					"comparison": "<",
+					"compare_to": 100
+				}
+			]
+		}
+	},
+	"passive_regen_cooldown":{
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function davwyndragon:radarscanrange",
+			"permission_level": 4
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"passive_scan_range":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function davwyndragon:radarscanrange",
+			"permission_level": 4
+		},
+		"interval": 20
+	},
+	"passive_normal_fly_state":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:prevent_flight_resource",
+					"change": -1
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:prevent_flight_resource",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}						
+	},
+	"passive_prevent_fly_state":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:beamsaberclaw_timeline_resource",
+								"comparison": "!=",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:submerged_in",
+								"fluid": "minecraft:water"
+							},
+							{
+								"type": "origins:submerged_in",
+								"fluid": "minecraft:lava"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:prevent_flight_resource",
+								"operation":"set",
+								"change": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:prevent_flight_resource",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:grant_power",
+								"power": "davwyndragon:passive_wings",
+								"source": "davwyndragon:davwyndragon"
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 1				
+	},
+	"passive_stop_flight":{
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition":{
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:prevent_flight_resource",
+								"comparison": "==",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:fall_flying"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:prevent_flight_resource",
+								"operation":"set",
+								"change": 2
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.jump",
+			"continuous": false
+		}
+	},
+	"passive_stop_flight_condition":{
+		"type": "origins:prevent_elytra_flight",
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:prevent_flight_resource",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	}
+}

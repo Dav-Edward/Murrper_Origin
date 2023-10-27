@@ -1,0 +1,40 @@
+{
+	"name": "§6§n§lEnergy Orbs",
+	"description": "Summons orbs that automatically fire at enemies.§7\n[Unlock at level 6]\n- this ability is toggleable\n- look in a direction to expand the attack range in your forward facing area.\n- rider can shoot same as energy orb.\n[PVP]\n- removes the extended range",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 8,
+		"condition":{
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:skill_cycle",
+							"comparison": "==",
+							"compare_to": 2
+						},
+						{
+							"type": "origins:resource",
+							"resource": "davwyndragon:energyorb_toggle",
+							"comparison": "==",
+							"compare_to": 1
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:option_toggle",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	}
+}

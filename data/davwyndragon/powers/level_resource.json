@@ -1,0 +1,10 @@
+{
+	"name": "§f§n§lLevel System",
+	"description": "Level system unlocks new abilities as you progress.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 100000,
+    "hud_render": {
+        "should_render": false
+	}
+}

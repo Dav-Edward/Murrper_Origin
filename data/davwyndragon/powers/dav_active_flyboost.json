@@ -1,0 +1,38 @@
+{
+	"type": "origins:multiple",
+
+	"flyboostforward": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "davwyndragon:dav_flyboost_resource",
+			"operation": "set",
+			"change": 2
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.forward",
+			"continuous": true
+		}
+	},
+	"flyboostback": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "davwyndragon:dav_flyboost_resource",
+			"operation": "set",
+			"change": 0
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.back",
+			"continuous": true
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+    "type": "origins:action_over_time",
+	"name": "§2§n§lPassive Regenaration",
+	"description": "Regenarate health over time.§7\n[Passive]\n- this ability will activate when you stand still.",
+    "entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:regeneration",
+					"duration": 50,
+					"amplifier": 0,
+					"show_particles":false
+				}
+			}
+		]
+    },
+    "interval": 50,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:moving",
+				"inverted": true
+			},
+			{
+				"type": "origins:resource",
+				"resource": "davwyndragon:state_resource",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			{
+				"type": "origins:status_effect",
+				"effect": "minecraft:regeneration",
+				"inverted": true
+			}
+		]
+	}
+}

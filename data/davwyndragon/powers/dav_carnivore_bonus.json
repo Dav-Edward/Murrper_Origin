@@ -1,0 +1,44 @@
+{
+    "hidden": true,
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "origins:meat"
+                        }
+                    },
+                    {
+                        "type": "origins:meat"
+                    }
+                ]
+            },
+            {
+                "type": "origins:food"
+            },
+            {
+                "inverted": true,
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "origins:ignore_diet"
+                }
+            }
+        ]
+    },
+    "food_modifier": {
+        "operation": "addition",
+        "value": 2,
+        "name": "Increased food points"
+    },
+    "saturation_modifier": {
+        "operation": "addition",
+        "value": 1,
+        "name": "Increased saturation points"
+    }
+}

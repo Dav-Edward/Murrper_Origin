@@ -1,0 +1,54 @@
+{
+  "type": "origins:modify_break_speed",
+  "block_condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:in_tag",
+		"tag": "davwyndragon:dav_digable_stone"
+      },
+      {
+        "type": "origins:in_tag",
+        "tag": "minecraft:base_stone_overworld"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:base_stone_nether"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:coal_ores"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:emerald_ores"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:gold_ores"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:needs_stone_tool"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:redstone_ores"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:stone_bricks"
+      }
+    ]	
+  },
+  "condition": {
+    "type": "origins:using_effective_tool",
+    "inverted": true
+  },
+  "modifier": {
+    "name": "Dragon digging claws stone",
+    "value": 0.16,
+    "operation": "addition"
+  },
+  "hidden": true
+}

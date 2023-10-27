@@ -1,0 +1,24 @@
+{
+	"type": "origins:action_over_time",
+    "entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:damage",
+				"amount": 6,
+				"source": {
+					"name": "magic.player",
+					"fire": true,
+					"magic": true
+				}
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute run power revoke @s davwyndragon:entity_damage_fireblast",
+				"permission_level": 4
+			}
+		]
+        
+    },
+    "interval": 1
+}

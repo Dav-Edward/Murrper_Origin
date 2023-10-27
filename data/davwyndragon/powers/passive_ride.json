@@ -1,0 +1,71 @@
+{
+	"name": "§2§n§lRideable Creature",
+	"description": "You have no scales and so soft this is good for ride, who wouldn't want to ride a dragon.§7\n[Passive]\n- toggle by sneaking and other people right click on you.\n- force dismount rider by sneaking and jump.",
+	"type": "origins:multiple",
+	"ride_mount":{
+		"type": "origins:action_on_being_used",
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:mount"
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving",
+					"inverted": true
+				},
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:passenger",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"ride_dismount_self":{
+		"type": "origins:active_self",
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition":{
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:sneaking"
+							},
+							{
+								"type": "origins:passenger"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:passenger_action",
+								"action": {
+									"type": "origins:dismount"
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		"key": {
+		  "key": "key.jump"
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"name": "§f§n§lMana Resource",
+	"description": "Mana is the resource used by some abilities.§7\n- this resource regenerates over time.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+		"bar_index": 7,
+		"condition":{
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:mana_resource",
+					"comparison": "<",
+					"compare_to": 100
+				}
+			]
+		}
+	}
+}

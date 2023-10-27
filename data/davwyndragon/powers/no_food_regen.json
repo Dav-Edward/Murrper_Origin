@@ -1,0 +1,5 @@
+{
+    "type": "origins:disable_regen",
+	"name": "§4§n§lNo Food Regen",
+	"description": "Because you use mana for regeneration.§7\n- food will no longer regenerate health."
+}

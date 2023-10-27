@@ -1,0 +1,4 @@
+execute as @e[type=!player,type=!minecraft:snow_golem,type=!minecraft:iron_golem,type=!minecraft:villager,type=!minecraft:wandering_trader,type=!minecraft:trader_llama,sort=nearest,distance=..10,nbt={DeathTime:0s},nbt=!{ActiveEffects:[{Id:14b}]}] unless data entity @s Owner run effect give @s minecraft:unluck 5 255 true
+execute at @s positioned ^ ^1 ^4 as @e[type=!player,sort=nearest,distance=..5,nbt={DeathTime:0s},nbt=!{ActiveEffects:[{Id:14b}]}] unless data entity @s Owner run effect give @s minecraft:unluck 5 255 true
+execute at @s positioned ^ ^1 ^7 as @e[type=!player,sort=nearest,distance=..5,nbt={DeathTime:0s},nbt=!{ActiveEffects:[{Id:14b}]}] unless data entity @s Owner run effect give @s minecraft:unluck 5 255 true
+execute at @s positioned ^ ^1 ^10 as @e[type=!player,sort=nearest,distance=..5,nbt={DeathTime:0s},nbt=!{ActiveEffects:[{Id:14b}]}] unless data entity @s Owner run effect give @s minecraft:unluck 5 255 true

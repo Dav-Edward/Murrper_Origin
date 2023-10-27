@@ -1,0 +1,23 @@
+{
+	"name": "§6§n§lRoll Dash",
+	"description": "The powerful mobility dash for any situation.§7\n[Unlock at level 4]\n- double tap to move forward or backward.\n- this ability uses stamina.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 5,
+		"condition":{
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:roll_dash_cooldown",
+					"comparison": "<",
+					"compare_to": 100
+				}
+			]
+		}
+	}
+}

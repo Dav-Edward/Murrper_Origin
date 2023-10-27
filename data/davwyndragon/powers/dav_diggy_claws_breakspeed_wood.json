@@ -1,0 +1,26 @@
+{
+  "type": "origins:modify_break_speed",
+  "block_condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:in_tag",
+		"tag": "davwyndragon:dav_digable_wood"
+      },
+	  {
+        "type": "origins:in_tag",
+        "tag": "minecraft:mineable/axe"
+      }
+    ]	
+  },
+  "condition": {
+    "type": "origins:using_effective_tool",
+    "inverted": true
+  },
+  "modifier": {
+    "name": "Dragon digging claws wood",
+    "value": 0.9,
+    "operation": "addition"
+  },
+  "hidden": true
+}

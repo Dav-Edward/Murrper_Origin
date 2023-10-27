@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bow", "minecraft:crossbow", "minecraft:shield", "minecraft:trident", "quark:flamerang", "quark:pickarang", "mowziesmobs:wrought_axe", "nethers_exoticism:rambutan_shield", "aquaculture:neptunium_bow", "infernalexp:glowsilk_bow", "upgradednetherite_ultimate:ultimate_upgraded_netherite_crossbow", "tetra:modular_bow", "tetra:modular_crossbow", "upgradednetherite_ultimate:ultimate_upgraded_netherite_bow"
+  ]
+}

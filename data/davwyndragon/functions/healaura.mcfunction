@@ -1,0 +1,1 @@
+execute as @e[distance=..5,nbt={DeathTime:0s}] run effect give @s minecraft:regeneration 3 0 false

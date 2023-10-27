@@ -1,0 +1,134 @@
+{
+    "type": "origins:prevent_death",
+	"name": "§6§n§lRevenge Stand",
+	"description": "The final survivability ultimate state from disaster that give you powerful defense and offense, this is your choice to fight back or escape.§7\n[Unlock at level 10]\n[Ultimate Ability]\n- when hp reaches 0, instead retain 1 hp and enter the revenge state.\n- quickly regenerates mana when enter revenge state.\n- quickly regenerates stamina when enter revenge state.\n- immune to fire and can breath underwater.\n[Weak State]\n- have one heart left.\n- no mana regeneration.\n- no stamina regeneration.",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+			{
+				"type": "origins:change_resource",
+				"resource": "davwyndragon:state_resource",
+				"change": 1
+			},
+            {
+                "type": "origins:clear_effect"
+            },
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "minecraft:regeneration",
+                        "amplifier": 255,
+                        "duration": 100,
+						"show_particles":false
+                    },
+					{
+						"effect": "minecraft:absorption",
+						"amplifier": 3,
+						"duration": 1200,
+						"show_particles":false
+					},
+                    {
+                        "effect": "minecraft:fire_resistance",
+                        "amplifier": 255,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:resistance",
+                        "amplifier": 3,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:speed",
+                        "amplifier": 2,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:jump_boost",
+                        "amplifier": 2,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:slow_falling",
+                        "amplifier": 255,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:saturation",
+                        "amplifier": 0,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:mining_fatigue",
+                        "amplifier": 255,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:water_breathing",
+                        "amplifier": 255,
+                        "duration": 100,
+						"show_particles":false
+                    },
+                    {
+                        "effect": "minecraft:strength",
+                        "amplifier": 2,
+                        "duration": 100,
+						"show_particles":false
+                    }
+                ]
+            },
+			{
+				"type": "origins:execute_command",
+				"command": "function davwyndragon:setlesshp",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute at @s run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.ender_dragon.growl"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.dragon_fireball.explode"
+			}
+        ]
+    },
+	"damage_condition": {
+		"type": "origins:amount",
+		"comparison": ">=",
+		"compare_to": 0
+	},
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:resource",
+				"resource": "davwyndragon:ultimate_resource",
+				"comparison": ">=",
+				"compare_to": 100
+			},
+			{
+				"type": "origins:resource",
+				"resource": "davwyndragon:state_resource",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			{
+				"type": "origins:xp_levels",
+				"comparison": ">=",
+				"compare_to": 10
+			}
+		]
+	}
+}

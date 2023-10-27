@@ -1,0 +1,29 @@
+{
+	"name": "§6§n§lBeam Saber Claw",
+	"description": "Slash enemies with beam saber and deal damage in large area.§7\n[Unlock at level 8]\n- this ability will grant rage and when rage gauge is full this ability will change to special attack.\n[PVP]\n- removes fire damage and knockback.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 3,
+		"condition":{
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:skill_cycle",
+					"comparison": "==",
+					"compare_to": 3
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:option_toggle",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	}
+}

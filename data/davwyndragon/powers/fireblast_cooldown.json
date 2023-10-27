@@ -1,0 +1,34 @@
+{
+	"name": "§6§n§lFire Blast",
+	"description": "Fires a mid-ranged blast at an enemy that knocks them back and sets them on fire.§7\n[Unlock at level 1]\n- targets the nearest enemy.\n[PVP]\n- removes fire damage and knockback.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 15,
+		"condition":{
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:skill_cycle",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:xp_levels",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:option_toggle",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	}
+}

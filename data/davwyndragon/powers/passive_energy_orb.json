@@ -1,0 +1,547 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"energyorb_particle":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function davwyndragon:summonenergyorb_particle",
+					"permission_level": 4
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"passive_energyorb_random":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:energyorb_random_resource",
+								"comparison": "<",
+								"compare_to": 8
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:energyorb_random_resource",
+								"change": 1
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:energyorb_random_resource",
+								"comparison": ">=",
+								"compare_to": 8
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:energyorb_random_resource",
+								"change": -7
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 1
+	},
+	"energyorb_detect":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function davwyndragon:radarscanrange",
+					"permission_level": 4
+				}
+			]
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"energyorb_detect_attacker":{
+		"type": "origins:attacker_action_when_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "minecraft:unluck",
+						"amplifier": 255,
+						"duration": 200,
+						"show_particles": false,
+						"show_icon": false
+					}
+				}
+			]
+		},
+		"cooldown": 10
+	},
+	"energyorb_switch":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:energyorb_shoot_toggle",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:energyorb_shoot_toggle",
+								"change": 1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:energyorb_ammo",
+								"change": 5
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:energyorb_shoot_toggle",
+								"comparison": "==",
+								"compare_to": 1
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:energyorb_shoot_toggle",
+								"change": -1
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "davwyndragon:energyorb_ammo",
+								"change": 5
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 40,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:mana_resource",
+					"comparison": ">=",
+					"compare_to": 10
+				}
+			]
+		}
+	},
+	"energyorb_turret_switch":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:energyorb_turret_ammo",
+					"change": 10
+				}
+			]
+		},
+		"interval": 100,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"energyorb_shoot":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:energyorb_shoot_toggle",
+								"comparison": "==",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:mana_resource",
+								"comparison": ">=",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:if_else_list",
+								"actions": [
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:pvp_toggle",
+													"comparison": "==",
+													"compare_to": 0
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:summonenergyorb_shoot_l",
+													"permission_level": 4
+												}
+											]
+										}
+									},
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:pvp_toggle",
+													"comparison": "==",
+													"compare_to": 1
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:summonenergyorb_shoot_l_pvp",
+													"permission_level": 4
+												}
+											]
+										}
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:energyorb_shoot_toggle",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"type": "origins:resource",
+								"resource": "davwyndragon:mana_resource",
+								"comparison": ">=",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:if_else_list",
+								"actions": [
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:pvp_toggle",
+													"comparison": "==",
+													"compare_to": 0
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:summonenergyorb_shoot_r",
+													"permission_level": 4
+												}
+											]
+										}
+									},
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:pvp_toggle",
+													"comparison": "==",
+													"compare_to": 1
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:summonenergyorb_shoot_r_pvp",
+													"permission_level": 4
+												}
+											]
+										}
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 3,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_ammo",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"energyorb_turret_particle":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function davwyndragon:summonenergyorb_turret_particle",
+					"permission_level": 4
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:passenger"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"energyorb_turret_shoot":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "apoli:passenger_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:if_else_list",
+								"actions": [
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:pvp_toggle",
+													"comparison": "==",
+													"compare_to": 0
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:summonenergyorb_shoot_c",
+													"permission_level": 4
+												}
+											]
+										}
+									},
+									{
+										"condition":{
+											"type": "origins:and",
+											"conditions": [
+												{
+													"type": "origins:resource",
+													"resource": "davwyndragon:pvp_toggle",
+													"comparison": "==",
+													"compare_to": 1
+												}
+											]
+										},
+										"action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "function davwyndragon:summonenergyorb_shoot_c_pvp",
+													"permission_level": 4
+												}
+											]
+										}
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 3,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:passenger"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "davwyndragon:energyorb_turret_ammo",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"energyorb_cancel_ability":{
+		"type": "origins:self_action_when_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "davwyndragon:energyorb_toggle",
+					"operation":"set",
+					"change": 0
+				}
+			]
+		},
+		"damage_condition": {
+			"type": "origins:amount",
+			"comparison": ">",
+			"compare_to": 0
+		},
+		"cooldown": 1
+	}
+}
