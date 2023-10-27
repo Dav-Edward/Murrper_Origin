@@ -70,7 +70,9 @@
 		"davwyndragon:dav_diggy_claws",
 		"davwyndragon:dav_diggy_claws_breakspeed_stone",
 		"davwyndragon:dav_diggy_claws_breakspeed_dirt",
-		"davwyndragon:dav_diggy_claws_breakspeed_wood"
+		"davwyndragon:dav_diggy_claws_breakspeed_wood",
+		"davwyndragon:dav_no_craftingtable",
+		"davwyndragon:dav_no_weapons"
 	],
 	"icon": "minecraft:amethyst_shard",
 	"order": 999,

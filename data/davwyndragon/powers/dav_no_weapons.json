@@ -4,6 +4,6 @@
     "type": "origins:prevent_item_use",
     "item_condition": {
         "type": "origins:ingredient",
-        "tag": "#davwyndragon:dav_blacklisted_weapons"
+        "tag": "davwyndragon:dav_blacklisted_weapons"
     }
 }
