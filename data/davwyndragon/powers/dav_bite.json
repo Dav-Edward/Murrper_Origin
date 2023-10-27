@@ -1,5 +1,5 @@
 {
-    "name": "Bite",
+    "name": "§2§n§lBite",
     "description": "Your bite does 2 Hearts damage",
     "condition": {
         "type": "origins:equipped_item",

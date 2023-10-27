@@ -1,5 +1,5 @@
 {
-  "name": "Digging claws",
+  "name": "§2§n§lDigging claws",
   "description": "Tiny but tough, you can dig through dirt, stone, and soft ores.",
   "type": "origins:modify_harvest",
   "allow": true,

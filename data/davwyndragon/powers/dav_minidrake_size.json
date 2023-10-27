@@ -1,6 +1,6 @@
 {
   "name": "Minidrake sized",
-  "description": "You're a minidrake, you're so small you fit in 1x1 block spaces.",
+  "description": "As minidrake you are so small you fit in 1x1 block spaces.",
 
   "type": "origins:action_on_callback",
     "entity_action_chosen": {

@@ -1,7 +1,9 @@
 {
+	"name": "§4§n§lCannot wield weapons",
+	"description": "You rely on your natural weapons to fight. You cannot use man-made weapons.",
     "type": "origins:prevent_item_use",
     "item_condition": {
-        "type": "origins:tag",
-        "tag": "davwyndragon:dav_blacklisted_weapons"
+        "type": "origins:ingredient",
+        "tag": "#davwyndragon:dav_blacklisted_weapons"
     }
 }

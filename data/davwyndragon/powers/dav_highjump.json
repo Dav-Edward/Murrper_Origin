@@ -1,5 +1,5 @@
 {
-    "name": "High jump",
+    "name": "§2§n§lHigh jump",
 	"description": "As a small dragon you can jump twice your height.",
 	"type": "origins:modify_jump",
     "modifier": {
