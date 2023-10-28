@@ -5,15 +5,45 @@
     "minecraft:crossbow",
     "minecraft:shield",
     "minecraft:trident",
-    "quark:flamerang",
-    "quark:pickarang",
-    "mowziesmobs:wrought_axe",
-    "nethers_exoticism:rambutan_shield",
-    "aquaculture:neptunium_bow",
-    "infernalexp:glowsilk_bow",
-    "upgradednetherite_ultimate:ultimate_upgraded_netherite_crossbow",
-    "tetra:modular_bow",
-    "tetra:modular_crossbow",
-    "upgradednetherite_ultimate:ultimate_upgraded_netherite_bow"
+    {
+      "id": "quark:flamerang",
+      "required": false
+    },
+    {
+      "id": "quark:pickarang",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:wrought_axe",
+      "required": false
+    },
+    {
+      "id": "nethers_exoticism:rambutan_shield",
+      "required": false
+    },
+    {
+      "id": "aquaculture:neptunium_bow",
+      "required": false
+    },
+    {
+      "id": "infernalexp:glowsilk_bow",
+      "required": false
+    },
+    {
+      "id": "upgradednetherite_ultimate:ultimate_upgraded_netherite_crossbow",
+      "required": false
+    },
+    {
+      "id": "tetra:modular_bow",
+      "required": false
+    },
+    {
+      "id": "tetra:modular_crossbow",
+      "required": false
+    },
+    {
+      "id": "upgradednetherite_ultimate:ultimate_upgraded_netherite_bow",
+      "required": false
+    }
   ]
 }
